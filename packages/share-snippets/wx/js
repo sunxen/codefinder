@@ -1,0 +1,2779 @@
+//app.js
+App({
+	//onLaunch,onShow: options(path,query,scene,shareTicket,referrerInfo(appId,extraData))
+	onLaunch: function(options){
+		${1}
+	},
+	onShow: function(options){
+
+	},
+	onHide: function(){
+
+	},
+	onError: function(msg){
+
+	},
+	//options(path,query,isEntryPage)
+	onPageNotFound: function(options){
+
+	},
+	globalData: {
+		${2}
+	}
+});
+
+
+//Page Object
+Page({
+	data: {
+		${1}
+	},
+	//options(Object)
+	onLoad: function(options){
+		${2}
+	},
+	onReady: function(){
+		${3}
+	},
+	onShow: function(){
+		${4}
+	},
+	onHide: function(){
+
+	},
+	onUnload: function(){
+
+	},
+	onPullDownRefresh: function(){
+
+	},
+	onReachBottom: function(){
+
+	},
+	onShareAppMessage: function(){
+
+	},
+	onPageScroll: function(){
+
+	},
+	//item(index,pagePath,text)
+	onTabItemTap:function(item){
+
+	}
+});
+
+
+//Component Object
+Component({
+	properties: {
+		${1:myProperty}:{
+			type:${2:String},
+			value:${3:''},
+			observer: function(){${4}}
+		},
+
+	},
+	data: {
+
+	},
+	methods: {
+		${5}
+	},
+	created: function(){
+
+	},
+	attached: function(){
+
+	},
+	ready: function(){
+
+	},
+	moved: function(){
+
+	},
+	detached: function(){
+
+	},
+});
+
+
+${1:var curPages = } getCurrentPages();
+${2}
+
+
+${1:var appInst = } getApp();
+${2}
+
+
+${1:var reqTask = }wx.request({
+	url: '${2}',
+	data: {${3}},
+	header: {${4:'content-type':'application/json'}},
+	method: '${5:GET}',
+	dataType: '${6:json}',
+	responseType: '${7:text}',
+	success: (result)=>{
+		${8}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+reqTask.abort();
+
+
+${1:var upTask = }wx.uploadFile({
+	url: '${2}',
+	filePath: ${3},
+	name: ${4},
+	formData: {${5}},
+	success: (result)=>{
+		${6}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+upTask.onProgressUpdate((result)=>{
+		${1}
+	});
+
+
+upTask.abort();
+
+
+${1:var downTask = }wx.downloadFile({
+	url: '${2}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+downTask.onProgressUpdate((result)=>{
+		${1}
+	});
+
+
+downTask.abort();
+
+
+${1:var sockTask = }wx.connectSocket({
+	url: '${2}',
+	header: {${3:'content-type':'application/json'}},
+	method: '${4:GET}',
+	protocols: [${5}],
+	success: ()=>{
+		${6}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onSocketOpen(${1:result} => {
+	${2}
+});
+
+
+wx.onSocketError(${1:result} => {
+	${2}
+});
+
+
+wx.sendSocketMessage({
+	data: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onSocketMessage((${1:result})=>{${2}});
+
+
+wx.closeSocket({
+	code: ${1:1000},
+	reason: '${2}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onSocketClose((${1:result})=>{
+	${2}
+});
+
+
+sockTask.send({
+	data: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+sockTask.close({
+	code: ${1},
+	reason: ${2},
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+sockTask.onOpen(${1:result} => {
+	${2}
+});
+
+
+sockTask.onClose(${1:result} => {
+	${2}
+});
+
+
+sockTask.onError(${1:result} => {
+	${2}
+});
+
+
+sockTask.onMessage(${1:result} => {
+	${2}
+});
+
+
+wx.chooseImage({
+	count: ${1:9},
+	sizeType: ${2:['original','compressed']},
+	sourceType: ${3:['album','camera']},
+	success: (result)=>{
+		${4}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.previewImage({
+	current: '${1}',
+	urls: [${2}],
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getImageInfo({
+	src: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.saveImageToPhotosAlbum({
+	filePath: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.startRecord({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.stopRecord();
+
+
+${1:var recordManager = }wx.getRecorderManager();
+
+
+recordManager.start({
+	duration: ${1},
+	sampleRate: ${2:44100},
+	numberOfChannels: ${3:2},
+	format: ${4:'aac'}
+});
+
+
+recordManager.pause();
+
+
+recordManager.resume();
+
+
+recordManager.stop();
+
+
+recordManager.onStart((${1})=>{
+	${2}
+});
+
+
+recordManager.onPause((${1})=>{
+	${2}
+});
+
+
+recordManager.onStop((${1:result})=>{
+	${2}
+});
+
+
+recordManager.onFrameRecorded((${1:result})=>{
+	${2}
+});
+
+
+recordManager.onError((${1:errMsg})=>{
+	${2}
+});
+
+
+wx.playVoice({
+	filePath: '${1}',
+	duration: ${2:60},
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.pauseVoice();
+
+
+wx.stopVoice();
+
+
+wx.getBackgroundAudioPlayerState({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.playBackgroundAudio({
+	dataUrl: '${1}',
+	title: '${2}',
+	coverImgUrl: '${3}',
+	success: (result)=>{
+		${4}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.playBackgroundAudio();
+
+
+wx.seekBackgroundAudio({
+	position: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.stopBackgroundAudio();
+
+
+wx.onBackgroundAudioPlay((${1:result})=>{${2}});
+
+
+wx.onBackgroundAudioPause((${1:result})=>{${2}});
+
+
+wx.onBackgroundAudioStop((${1:result})=>{${2}});
+
+
+// properties(Read only)(duration,currentTime,paused,buffered)
+// properties(src(m4a, aac, mp3, wav),startTime,title,epname,singer,coverImgUrl,webUrl,protocol)
+${1:var backAudioManager = }wx.getBackgroundAudioManager();
+
+
+backAudioManager.src = ${1};
+
+
+backAudioManager.play();
+
+
+backAudioManager.pause();
+
+
+backAudioManager.stop();
+
+
+backAudioManager.seek(${1});
+
+
+backAudioManager.onCanplay(${1:()=>{
+		${2}
+	}});
+
+
+backAudioManager.onPlay(()=>{
+	${1}
+});
+
+
+backAudioManager.onPause(()=>{
+	${1}
+});
+
+
+backAudioManager.onStop(()=>{
+	${1}
+});
+
+
+backAudioManager.onEnded(()=>{
+	${1}
+});
+
+
+backAudioManager.onTimeUpdate((${1})=>{
+	${2}
+});
+
+
+backAudioManager.onPrev((${1})=>{
+	${2}
+});
+
+
+backAudioManager.onNext((${1})=>{
+	${2}
+});
+
+
+backAudioManager.onError((${1:errMsg})=>{
+	${2}
+});
+
+
+backAudioManager.onWaiting((${1})=>{
+	${2}
+});
+
+
+${1:var audioContext = }wx.createAudioContext(${2}, this);
+
+
+audioContext.setSrc('${1}');
+
+
+audioContext.play();
+
+
+audioContext.pause();
+
+
+audioContext.seek(${1});
+
+
+// properties(Read only)(duration,currentTime,paused,buffered,volume)
+// properties(src,startTime,autoplay,loop,obeyMuteSwitch)
+${1:var innerAudioContext = }wx.createInnerAudioContext();
+
+
+innerAudioContext.play();
+
+
+innerAudioContext.pause();
+
+
+innerAudioContext.stop();
+
+
+innerAudioContext.seek(${1});
+
+
+innerAudioContext.destroy();
+
+
+innerAudioContext.onCanplay(()=>{${1}});
+
+
+innerAudioContext.onPlay((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.onPause((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.onStop((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.onEnded((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.onTimeUpdate((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.onError((${1:errMsg})=>{
+	${2}
+});
+
+
+innerAudioContext.onWaiting((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.onSeeking((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.onSeeked((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.offCanplay((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.offPlay((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.offStop((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.offEnded((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.offTimeUpdate((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.offError((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.offWaiting((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.offSeeking((${1})=>{
+	${2}
+});
+
+
+innerAudioContext.offSeeked((${1})=>{
+	${2}
+});
+
+
+wx.getAvailableAudioSources({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.chooseVideo({
+	sourceType:['album', 'camera'],
+	compressed: ${1:true},
+	maxDuration:${2:15},
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.saveVideoToPhotosAlbum({
+	filePath: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${1:var videoContext = }wx.createVideoContext('${2:video}'${3:, this});
+
+
+videoContext.play();
+
+
+videoContext.pause();
+
+
+videoContext.stop();
+
+
+videoContext.seek(${1});
+
+
+videoContext.sendDanmu({
+	text: ${1},
+	color: ${2}
+});
+
+
+videoContext.playbackRate(${1});
+
+
+videoContext.requestFullScreen({
+	direction: ${1:0}
+});
+
+
+videoContext.exitFullScreen();
+
+
+videoContext.showStatusBar();
+
+
+videoContext.hideStatusBar();
+
+
+${1:var cameraContext = }wx.createCameraContext(${2:this});
+
+
+cameraContext.takePhoto({
+	quality: ${1:normal},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+cameraContext.startRecord({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+	timeoutCallback: (result)=>{
+		${2}
+	},
+});
+
+
+cameraContext.stopRecord({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${1:var livePlayerContext = }wx.createLivePlayerContext('${2:live-player}'${3:, this})
+
+
+livePlayerContext.play({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePlayerContext.stop({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePlayerContext.mute({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePlayerContext.pause({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePlayerContext.resume({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePlayerContext.requestFullScreen({
+	direction: ${1:0},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePlayerContext.exitFullScreen({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${1:var livePusherContext = }wx.createLivePusherContext('${2:live-pusher}'${3:, this})
+
+
+livePusherContext.play({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePusherContext.stop({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePusherContext.pause({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePusherContext.resume({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePusherContext.switchCamera({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePusherContext.snapshot({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+livePusherContext.toggleTorch({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.loadFontFace({
+	family: '${1}',
+	source: '${2}',
+	desc: {
+		style: '${3:normal}',
+		weight: '${4:normal}',
+		variant: '${5:normal}'
+	},
+	success: (result)=>{
+		${6}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.saveFile({
+	tempFilePath: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getSavedFileList({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getSavedFileInfo({
+	filePath: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.removeSavedFile({
+	filePath: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.openDocument({
+	filePath: ${1},
+	fileType: ${2:'docx'},
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.setStorage({
+	key: '${1:key}',
+	data: ${2:data},
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.setStorageSync(${1:key}, ${2:data});
+
+
+wx.getStorage({
+	key: '${1:key}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getStorageSync(${1:key});
+
+
+wx.getStorageInfo({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${1:let storageInfo = }wx.getStorageInfoSync();
+
+
+wx.removeStorage({
+	key: '${1:key},'
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.removeStorageSync(${1:key});
+
+
+wx.clearStorage();
+
+
+wx.clearStorageSync();
+
+
+wx.getLocation({
+	type: '${1:wgs84}',
+	altitude: ${2:false},
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.chooseLocation({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.openLocation({
+	latitude: ${1:0},
+	longitude: ${2:0},
+	scale: ${3:18},
+	name: '${4}',
+	address: '${5}',
+	success: (result)=>{
+		${6}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${1:var mapContext = }wx.createMapContext('${2:map}'${3:, this});
+
+
+mapContext.getCenterLocation({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+mapContext.moveToLocation();
+
+
+mapContext.translateMarker({
+	markerId: ${1},
+	destination: {
+		latitude: ${2},
+		longitude: ${3}
+	},
+	autoRotate: ${4:false},
+	rotate: ${5},
+	duration: ${6:1000},
+	animationEnd: ()=>{},
+	fail: ()=>{}
+});
+
+
+mapContext.includePoints({
+	points: [
+		{
+			latitude: ${1:latitude},
+			longitude: ${2:longitude}
+		}
+	],
+	padding:[$3]
+});
+
+
+mapContext.getRegion({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+mapContext.getScale({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getSystemInfo({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${var systemInfo = }wx.getSystemInfoSync();
+
+
+wx.canIUse(${1});
+
+
+wx.onMemoryWarning((result) => {
+	${1}
+});
+
+
+wx.getNetworkType({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onNetworkStatusChange((result) => {
+	${1}
+});
+
+
+wx.onAccelerometerChange((result) => {
+	${1}
+});
+
+
+wx.startAccelerometer({
+	interval: '${1:normal}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.stopAccelerometer({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onCompassChange((result) => {
+	${1}
+});
+
+
+wx.startCompass({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.stopCompass({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.makePhoneCall({
+	phoneNumber: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.scanCode({
+	onlyFromCamera: ${1:false},
+	scanType: ['${2:qrCode}','${3:barCode}','${4:datamatrix}','${5:pdf417}'],
+	success: (result)=>{
+		${6}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.setClipboardData({
+	data: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getClipboardData({
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.openBluetoothAdapter({
+	success: (result)=>{
+		${1}
+	,
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.closeBluetoothAdapter({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getBluetoothAdapterState({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onBluetoothAdapterStateChange((result) => {
+	${1}
+});
+
+
+wx.startBluetoothDevicesDiscovery({
+	services:[${1}]
+	allowDuplicatesKey:${2:false}
+	interval:${3:0}
+	success: (result)=>{
+		${4}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.stopBluetoothDevicesDiscovery({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getBluetoothDevices({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onBluetoothDeviceFound((result) => {
+	${1}
+});
+
+
+wx.getConnectedBluetoothDevices({
+	services: [${1}],
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.createBLEConnection({
+	deviceId: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.closeBLEConnection({
+	deviceId: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onBLEConnectionStateChange((result) => {
+	${1}
+});
+
+
+wx.getBLEDeviceServices({
+	deviceId: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getBLEDeviceCharacteristics({
+	deviceId: ${1},
+	services: ${2},
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.readBLECharacteristicValue({
+	deviceId: ${1},
+	services: ${2},
+	characteristicId: ${3},
+	success: (result)=>{
+		${4}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.writeBLECharacteristicValue({
+	deviceId: ${1},
+	services: ${2},
+	characteristicId: ${3},
+	value: ${4:<ArrayBuffer类型>},
+	success: (result)=>{
+		${5}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.notifyBLECharacteristicValueChange({
+	deviceId: ${1},
+	services: ${2},
+	characteristicId: ${3},
+	state: ${4:true},
+	value: ${5:<ArrayBuffer类型>},
+	success: (result)=>{
+		${6}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onBLECharacteristicValueChange((result) => {
+	${1}
+});
+
+
+wx.startBeaconDiscovery({
+	uuids: [${1}],
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.stopBeaconDiscovery({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getBeacons({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onBeaconUpdate((result) => {
+	${1}
+});
+
+
+wx.onBeaconServiceChange((result) => {
+	${1}
+});
+
+
+wx.setScreenBrightness({
+	value: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getScreenBrightness({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.vibrateLong({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.vibrateShort({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.setKeepScreenOn({
+	keepScreenOn: ${1:true},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onUserCaptureScreen((result)=>{
+	${1}
+});
+
+
+wx.addPhoneContact({
+	photoFilePath: ${1},
+	nickName: ${2},
+	lastName: ${3},
+	middleName: ${4},
+	firstName: ${5},
+	mobilePhoneNumber: ${6},
+	weChatNumber: ${7},
+	email: ${8},
+	success: (result)=>{
+		${9}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getHCEState({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.startHCE({
+	aid_list: [${1}],
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.stopHCE({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onHCEMessage((result) => {
+	${1}
+});
+
+
+wx.sendHCEMessage({
+	data: ${1:<ArrayBuffer类型>},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.startWifi({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.stopWifi({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.connectWifi({
+	SSID: ${1},
+	BSSID: ${2},
+	password: ${3},
+	success: (result)=>{
+		${4}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getWifiList({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onGetWifiList((result) => {
+	${1}
+});
+
+
+wx.setWifiList({
+	wifiList: [
+		{
+			SSID: ${1},
+			BSSID: ${2},
+			password: ${3}
+		}
+	],
+	success: (result)=>{
+		${4}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onWifiConnected((result) => {
+	${1}
+});
+
+
+wx.getConnectedWifi({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.showToast({
+	title: '${1}',
+	icon: '${2:none}',
+	image: '${3}',
+	duration: ${4:1500},
+	mask: ${5:false},
+	success: (result)=>{
+		${6}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.showLoading({
+	title: ${1},
+	mask: ${2:true},
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.hideToast();
+
+
+wx.hideLoading();
+
+
+wx.showModal({
+	title: '${1}',
+	content: '${2}',
+	showCancel: ${3:true},
+	cancelText: '${4:取消}',
+	cancelColor: '${5:#000000}',
+	confirmText: '${6:确定}',
+	confirmColor: '${7:#3CC51F}',
+	success: (result) => {
+		${8:if(result.confirm){
+			${9}
+		}}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.showActionSheet({
+	itemList: [${1}],
+	itemColor: '${2:#000000}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.onWindowResize((result)=>{
+		${1}
+	});
+
+
+wx.offWindowResize((result)=>{
+		${1}
+	});
+
+
+wx.setTopBarText({
+	text: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.setNavigationBarTitle({
+	title: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.showNavigationBarLoading();
+
+
+wx.hideNavigationBarLoading();
+
+
+wx.setNavigationBarColor({
+	frontColor: '${1:#ffffff}',
+	backgroundColor: '${2:#000000}',
+	animation: {
+		duration: ${3:0},
+		timingFunc: '${4:linear}'
+	},
+	success: (result)=>{
+		${5}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.setTabBarBadge({
+	index: ${1},
+	text: '${2}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.removeTabBarBadge({
+	index: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.showTabBarRedDot({
+	index: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.hideTabBarRedDot({
+	index: ${1},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.setTabBarStyle({
+	color: '${1:#000000}',
+	selectedColor: '${2:#1AAD16}',
+	backgroundColor: '${3:#e3e3e3}',
+	borderStyle: '${4:black}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.setTabBarItem({
+	index: ${1},
+	text: ${2},
+	iconPath: ${3},
+	selectedIconPath: ${4},
+	success: (result)=>{
+		${5}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.showTabBar({
+	animation: ${1:false},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.hideTabBar({
+	animation: ${1:false},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.setBackgroundColor({
+	backgroundColor: '${1}',
+	backgroundColorTop: '${2}',
+	backgroundColorBottom: '${3}'
+});
+
+
+wx.setBackgroundTextStyle({
+	textStyle: '${1:dark}'
+});
+
+
+wx.navigateTo({
+	url: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.redirectTo({
+	url: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.reLaunch({
+	url: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.switchTab({
+	url: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.navigateBack({
+	delta: ${1:1}
+});
+
+
+${1:let animation = }wx.createAnimation({
+	duration: ${2:400},
+	timingFunction: '${3:linear}',
+	delay: ${4:0},
+	transformOrigin: '${5:50% 50% 0}'
+});
+
+
+animation.opacity(${1});
+
+
+animation.backgroundColor(${1});
+
+
+animation.width(${1});
+
+
+animation.height(${1});
+
+
+animation.top(${1});
+
+
+animation.height(${1});
+
+
+animation.bottom(${1});
+
+
+animation.right(${1});
+
+
+animation.rotate(${1});
+
+
+animation.rotateX(${1});
+
+
+animation.rotateY(${1});
+
+
+animation.rotateZ(${1});
+
+
+animation.rotate3d(${1},${2},${3},${4});
+
+
+animation.scale(${1}${2:,});
+
+
+animation.scaleX(${1});
+
+
+animation.scaleY(${1});
+
+
+animation.scaleZ(${1});
+
+
+animation.scale3d(${1},${2},${3});
+
+
+animation.translate(${1}${2:,});
+
+
+animation.translateX(${1});
+
+
+animation.translateY(${1});
+
+
+animation.translateZ(${1});
+
+
+animation.translate3d(${1},${2},${3});
+
+
+animation.skew(${1}${2:,});
+
+
+animation.skewX(${1});
+
+
+animation.skewY(${1});
+
+
+animation.matrix(${1},${2},${3},${4},${5},${6});
+
+
+animation.matrix3d(${1},${2},${3},${4},${5},${6},${7},${8},${9},${10},${11},${12},${13},${14},${15},${16});
+
+
+wx.pageScrollTo({
+	scrollTop: ${1:0},
+	duration: ${2:300}
+});
+
+
+wx.startPullDownRefresh({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.stopPullDownRefresh
+
+
+wx.getExtConfig({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${1:let extConfig = }wx.getExtConfigSync();
+
+
+wx.login({
+	timeout:${1:10000},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.checkSession({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.authorize({
+	scope: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getUserInfo({
+	withCredentials: '${1:false}',
+	lang: '${2:zh_CN}',
+	timeout:${3:10000},
+	success: (result)=>{
+		${4}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.faceVerifyForPay({
+	scene: '${1}',
+	package: '${2}',
+	packageSign: '${3}',
+	otherVerifyTitle: '${4}',
+	success: (result)=>{
+		${5}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.requestPayment({
+	timeStamp: '${1}',
+	nonceStr: '${2}',
+	package: '${3}',
+	signType: '${4}',
+	paySign: '${5}',
+	success: (result)=>{
+		${6}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.showShareMenu({
+	withShareTicket: ${1:false}
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.hideShareMenu({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.updateShareMenu({
+	withShareTicket: ${1:false}
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getShareInfo({
+	shareTicket: ${1},
+	timeout:${2:10000},
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${1:let accInfo = }wx.getAccountInfoSync();
+
+
+wx.chooseAddress({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.addCard({
+	cardList: [${1}],
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.openCard({
+	cardList: [${1}],
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.openSetting({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getSetting({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.getWeRunData({
+	timeout:${1:10000},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.navigateToMiniProgram({
+	appId:'${1}',
+	path:'${2}',
+	extraData:{${3}},
+	envVersion:'${4:release}',
+	success: (result)=>{
+		${5}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.navigateBackMiniProgram({
+	extraData:{${1}},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.chooseInvoice({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.chooseInvoiceTitle({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.checkIsSupportSoterAuthentication({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.startSoterAuthentication({
+	requestAuthModes:['fingerPrint'],
+	challenge:'${1}',
+	authContent:'${2}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+wx.checkIsSoterEnrolledInDevice({
+	checkAuthMode:{${1}},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${1:var updateManager = }wx.getUpdateManager();
+
+
+updateManager.onCheckForUpdate((result) => {${1}});
+
+
+updateManager.onUpdateReady((result) => {${1}});
+
+
+updateManager.onUpdateFailed((result) => {${1}});
+
+
+updateManager.applyUpdate();
+
+
+${1:var worker = }wx.createWorker(${1});
+
+
+worker.postMessage(${1});
+
+
+worker.onMessage((result) => {${1}});
+
+
+worker.terminate();
+
+
+wx.reportMonitor(${1:name},${2:value});
+
+
+wx.setEnableDebug({
+	enableDebug:{${1:true}},
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+${1:var logger = }wx.getLogManager();
+
+
+logger.log(${1});
+
+
+logger.info(${1});
+
+
+logger.warn(${1});
+
+
+logger.debug(${1});
+
+
+wx.canvasToTempFilePath({
+	x: ${1:0},
+	y: ${2:0},
+	width: ${3},
+	height: ${4},
+	destWidth: ${5},
+	destHeight: ${6},
+	canvasId: ${7},
+	fileType: ${8:png},
+	quality: ${9:1.0},
+	success: (result)=>{
+		${10}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+}, this);
+
+
+wx.canvasGetImageData({
+	canvasId: ${1},
+	x: ${2:0},
+	y: ${3:0},
+	width: ${4},
+	height: ${5},
+	success: (result)=>{
+		${6}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+}, this);
+
+
+wx.canvasPutImageData({
+	canvasId: ${1},
+	data: ${2},
+	x: ${3},
+	y: ${4},
+	width: ${5},
+	height: ${6},
+	success: (result)=>{
+		${7}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+}, this);
+
+
+${1:var cvsCtx = }wx.createCanvasContext(${2:canvas-id}, this);
+
+
+cvsCtx.setFillStyle('${1}');
+
+
+cvsCtx.fillStyle = ${1};
+
+
+cvsCtx.setStrokeStyle(${1});
+
+
+cvsCtx.strokeStyle = ${1};
+
+
+cvsCtx.setShadow(${1:offsetX}, ${2:offsetY}, ${3:blur}, ${4:color});
+
+
+cvsCtx.createLinearGradient(${1:x0}, ${2:y0}, ${3:x1}, ${4:y1});
+
+
+cvsCtx.createCircularGradient(${1:x}, ${2:y}, ${3:r});
+
+
+cvsCtx.addColorStop(${1:stop(0 ~ 1)}, ${2:color});
+
+
+cvsCtx.setLineWidth(${1});
+
+
+cvsCtx.lineWidth = ${1};
+
+
+cvsCtx.setLineCap('${1:butt}');
+
+
+cvsCtx.lineCap = '${1:butt}';
+
+
+cvsCtx.setLineJoin('${1:bevel}');
+
+
+cvsCtx.lineJoin = '${1:bevel}';
+
+
+cvsCtx.setLineDash([${1:pattern}], ${2:offset});
+
+
+cvsCtx.setMiterLimit(${1});
+
+
+cvsCtx.rect(${1:x}, ${2:y}, ${3:width}, ${4:height});
+
+
+cvsCtx.fillRect(${1:x}, ${2:y}, ${3:width}, ${4:height});
+
+
+cvsCtx.strokeRect(${1:x}, ${2:y}, ${3:width}, ${4:height});
+
+
+cvsCtx.clearRect(${1:x}, ${2:y}, ${3:width}, ${4:height});
+
+
+cvsCtx.fill();
+
+
+cvsCtx.stroke();
+
+
+cvsCtx.beginPath();
+
+
+cvsCtx.closePath();
+
+
+cvsCtx.moveTo(${1:x}, ${2:y});
+
+
+cvsCtx.lineTo(${1:x}, ${2:y});
+
+
+cvsCtx.arc(${1:x}, ${2:y}, ${3:r}, ${4:sAngle}, ${5:eAngle}, ${6:false});
+
+
+cvsCtx.bezierCurveTo(${1:cp1x}, ${2:cp1y}, ${3:cp2x}, ${4:cp2y}, ${5:x}, ${6:y});
+
+
+cvsCtx.quadraticCurveTo(${1:cpx}, ${2:cpy}, ${3:x}, ${4:y});
+
+
+cvsCtx.scale(${1:scaleWidth}, ${2:scaleHeight});
+
+
+cvsCtx.rotate(${1:degrees} * Math.PI/180);
+
+
+cvsCtx.translate(${1:x}, ${2:y});
+
+
+cvsCtx.clip();
+
+
+cvsCtx.setFontSize(${1:20});
+
+
+cvsCtx.fillText('${1:text}', ${2:x}, ${3:y});
+
+
+cvsCtx.setTextAlign('${1:center}');
+
+
+cvsCtx.textAlign = '${1:center}';
+
+
+cvsCtx.setTextBaseline('${1:middle}');
+
+
+cvsCtx.textBaseline = '${1:middle}';
+
+
+cvsCtx.drawImage(${1:imageResource}, ${2:dx}, ${3:dy}, ${4:dWidth}, ${5:dHeight});
+
+
+cvsCtx.setGlobalAlpha(${1:1});
+
+
+cvsCtx.globalAlpha = ${1:1};
+
+
+cvsCtx.save();
+
+
+cvsCtx.restore();
+
+
+cvsCtx.draw(${1:true}, ${2:callback});
+
+
+${1:var metrics =}cvsCtx.measureText(${2});
+
+
+cvsCtx.globalCompositeOperation = ${1};
+
+
+cvsCtx.arcTo(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:radius});
+
+
+cvsCtx.strokeText(${1:text}, ${2:x}, ${3:y});
+
+
+cvsCtx.lineDashOffset = ${1:value};
+
+
+cvsCtx.createPattern(${1:image}, ${2:repetition});
+
+
+cvsCtx.shadowBlur = ${1:value};
+
+
+cvsCtx.shadowColor = ${1:value};
+
+
+cvsCtx.shadowOffsetX = ${1:value};
+
+
+cvsCtx.shadowOffsetY = ${1:value};
+
+
+cvsCtx.font = '${1:style}, ${2:weight}, ${3:size}, ${4:family}';
+
+
+cvsCtx.setTransform(${1:scaleX}, ${2:skewX}, ${3:skewY}, ${4:scaleY}, ${5:translateX}, ${6:translateY});
+
+
+${1:var fileManager = }wx.getFileSystemManager();
+
+
+fileManager.appendFile({
+	filePath: '${1}',
+	data: '${2}',
+	encoding:'${3:utf8}',
+	success: (result)=>{
+		${4}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	fileManager.appendFileSync('${1}','${2}','${3:utf8}');
+}catch(e){
+	${4}
+}
+
+
+fileManager.access({
+	path: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	fileManager.accessSync('${1}');
+}catch(e){
+	${2}
+}
+
+
+fileManager.copyFile({
+	srcPath: '${1}',
+	destPath: '${2}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	fileManager.copyFileSync('${1}','${2}');
+}catch(e){
+	${3}
+}
+
+
+fileManager.getSavedFileList({
+	success: (result)=>{
+		${1}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+fileManager.getFileInfo({
+	filePath: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+fileManager.mkdir({
+	dirPath: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	fileManager.mkdirSync('${1}');
+}catch(e){
+	${2}
+}
+
+
+fileManager.removeSavedFile({
+	filePath: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+fileManager.readFile({
+	filePath: '${1}',
+	encoding: '${2}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	var ${1:fileData} = fileManager.readFileSync('${2}','${3}');
+}catch(e){
+	${4}
+}
+
+
+fileManager.readdir({
+	dirPath: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	var ${1:fileList} = fileManager.readdirSync('${2}');
+}catch(e){
+	${3}
+}
+
+
+fileManager.rename({
+	oldPath: '${1}',
+	newPath: '${2}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	fileManager.renameSync('${1}','${2}');
+}catch(e){
+	${3}
+}
+
+
+fileManager.rmdir({
+	dirPath: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	fileManager.rmdirSync('${1}');
+}catch(e){
+	${2}
+}
+
+
+fileManager.saveFile({
+	tempFilePath: '${1}',
+	filePath: '${2}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	var ${1:fileNumber} = fileManager.saveFileSync('${2}','${3}');
+}catch(e){
+	${4}
+}
+
+
+fileManager.stat({
+	path: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	var ${1:fileStat} = fileManager.statSync('${2}');
+}catch(e){
+	${3}
+}
+
+
+fileStat.isDirectory();
+
+
+fileStat.isFile();
+
+
+fileManager.unlink({
+	filePath: '${1}',
+	success: (result)=>{
+		${2}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	fileManager.unlinkSync('${1}');
+}catch(e){
+	${2}
+}
+
+
+fileManager.unzip({
+	zipFilePath: '${1}',
+	targetPath: '${2}',
+	success: (result)=>{
+		${3}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+fileManager.writeFile({
+	filePath: '${1}',
+	data: '${2}',
+	encoding: '${3:utf8}',
+	success: (result)=>{
+		${4}
+	},
+	fail: ()=>{},
+	complete: ()=>{}
+});
+
+
+try{
+	fileManager.writeFileSync('${1}','${2}','${3:utf8}');
+}catch(e){
+	${4}
+}
+
+
+wx.nextTick(()=>{
+	${1}
+});
+
+
+let ${1:menuButton} = wx.getMenuButtonBoundingClientRect();
+
+
+let ${1:interObser} = wx.createIntersectionObserver(${2:this},${3});
+
+
+interObser.relativeTo(${1:selector},${2});
+
+
+interObser.relativeToViewport(${1});
+
+
+interObser.observe(${1:selector},(result)=>{
+	${2}
+});
+
+
+interObser.disconnect();
+
+
+let ${1:selQuery} = wx.createSelectorQuery();
+
+
+selQuery.in(${1:this});
+
+
+selQuery.select(${2:selector});
+
+
+selQuery.selectAll();
+
+
+selQuery.selectViewport();
+
+
+selQuery.exec(result)=>{
+	${1}
+});

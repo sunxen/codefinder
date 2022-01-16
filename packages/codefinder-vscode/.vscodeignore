@@ -1,0 +1,7 @@
+**
+!node_modules/
+!out/
+!logo.png
+!package.json
+!LICENSE
+!README.md

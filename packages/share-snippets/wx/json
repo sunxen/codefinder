@@ -1,0 +1,82 @@
+{
+	"navigationBarBackgroundColor": "#000000",
+	"navigationBarTextStyle": "white",
+	"navigationBarTitleText": "",
+	"backgroundColor": "#ffffff",
+	"backgroundTextStyle": "dark|light",
+	"enablePullDownRefresh": false,
+	"disableScroll": false,
+	"onReachBottomDistance": false
+}
+
+
+"pages": [
+	"pages/index/index"
+],
+${1}
+
+
+"window": {
+	"navigationBarBackgroundColor": "#000000",
+	"navigationBarTextStyle": "white",
+	"navigationBarTitleText": "",
+	"navigationStyle": "default|custom",
+	"backgroundColor": "#ffffff",
+	"backgroundTextStyle": "dark|light",
+	"backgroundColorTop": "#ffffff",
+	"backgroundColorBottom": "#ffffff",
+	"enablePullDownRefresh": true,
+	"onReachBottomDistance": 50
+},
+${1}
+
+
+"tabBar": {
+	"color": "${1}",
+	"selectedColor": "${2}",
+	"backgroundColor": "${3}",
+	"position": "bottom",
+	"borderStyle": "black",
+	"list": [
+		{
+			"pagePath": "${4}",
+			"text": "${5}",
+			"iconPath": "${6}",
+			"selectedIconPath": "${7}"
+		}
+	]
+},
+${8}
+
+
+"networkTimeout": {
+	"request": ${1:10000},
+	"connectSocket": ${2:10000},
+	"uploadFile": ${3:10000},
+	"downloadFile": ${4:10000}
+},
+${5}
+
+
+"debug":true,
+
+
+"functionalPages":false,
+
+
+"subPackages":[],
+
+
+"workers":"",
+
+
+"requiredBackgroundModes":["audio"],
+
+
+"plugins":{},
+
+
+"preloadRule":{},
+
+
+"resizable":false,

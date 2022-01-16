@@ -1,0 +1,55 @@
+{
+    "name": "codefinder-vscode",
+    "displayName": "Code Finder",
+    "description": "Smart input method for code and snippets, input few letters to complete one line or more code. Automatically extract all snippets from the current project, and you can also add custom snippets. Supports all programming languages: Javascript, HTML, CSS, Python, Go, PHP, Vue, React ...",
+    "version": "1.0.0",
+    "publisher": "sunxen",
+    "icon": "logo.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sunxen/codefinder"
+    },
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": []
+    },
+    "scripts": {
+        "build": "vsce package --yarn",
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint . --max-warnings 0",
+        "lint:fix": "eslint . --fix",
+        "prettier": "prettier --write src/*",
+        "prettier:check": "prettier --check src/",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^10.17.15",
+        "@typescript-eslint/eslint-plugin": "^4.21.0",
+        "@typescript-eslint/parser": "^4.18.0",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb-typescript": "^12.3.1",
+        "eslint-config-prettier": "^8.2.0",
+        "eslint-import-resolver-typescript": "^2.4.0",
+        "eslint-plugin-import": "^2.22.1",
+        "tslint": "^5.12.1",
+        "typescript": "^3.7.5"
+    },
+    "dependencies": {
+        "@types/vscode": "^1.50.0",
+        "axios": "^0.21.4",
+        "lin": "link:../lin",
+        "prettier": "^1.15.2"
+    }
+}

@@ -1,0 +1,380 @@
+data() {
+	return {
+		${1:key}: ${2:value}
+	}
+},
+
+
+methods: {
+	${1:name}() {
+		${0}
+	}
+},
+
+
+computed: {
+	${1:name}() {
+		return this.${2:data} ${0}
+	}
+},
+
+
+beforeCreate () {
+	${0};
+},
+
+
+created () {
+	${0};
+},
+
+
+beforeMount () {
+	${0};
+},
+
+
+mounted () {
+	${0};
+},
+
+
+beforeUpdate () {
+	${0};
+},
+
+
+updated () {
+	${0};
+},
+
+
+beforeDestroy () {
+	${0};
+},
+
+
+destroyed () {
+	${0};
+},
+
+
+watch: {
+	${1:data}(${2:newValue}, ${3:oldValue}) {
+		${0}
+	}
+},
+
+
+watch: {
+	${1:data}: {
+		immediate: ${2:true},
+		deep: ${3:true},
+		handler(${4:newValue}, ${5:oldValue}) {
+			${0}
+		}
+	}
+},
+
+
+props: {
+	${1:propName}: {
+		type: ${2:Number},
+		default: ${0}
+	},
+},
+
+
+import ${1:New} from '@/components/${1:New}.vue';
+
+
+components: {
+	${1:New},
+},
+
+
+import ${1:Name} from '@/components/${1:Name}.vue';
+
+export default {
+	components: {
+		${1:Name}
+	},
+};
+
+
+${1:New} = () => import('@/components/${1:New}.vue')
+
+
+import { mapState } from 'vuex';
+
+export default {
+	computed: {
+		...mapState([
+			${1:'nameOfState'},
+		])
+	},
+};
+
+
+import { mapGetters } from 'vuex';
+
+export default {
+	computed: {
+		...mapGetters([
+			${1:'nameOfGetter'},
+		])
+	},
+};
+
+
+import { mapMutations } from 'vuex';
+
+export default {
+	methods: {
+		...mapMutations([
+			${1:'nameOfMutation'}, //also supports payload `this.nameOfMutation(amount)` 
+		])
+	},
+};
+
+
+import { mapActions } from 'vuex';
+
+export default {
+	methods: {
+		...mapActions([
+			${1:'nameOfAction'}, //also supports payload `this.nameOfAction(amount)` 
+		])
+	},
+};
+
+
+filters: {
+	${1:fnName}: function(${2:value}) {
+		return ${2:value}${0};
+	}
+}
+
+
+const ${1:mixinName} = {
+	mounted() {
+		console.log('hello from mixin!');
+	},
+};
+
+
+mixins: [${1:mixinName}],
+
+
+Vue.directive('${1:directiveName}', {
+	bind(el, binding, vnode) {
+		el.style.${2:arg} = binding.value.${2:arg};
+	}
+});
+
+
+import { ${1:libName} } from '${1:libName}';
+
+
+import gsap from 'gsap';
+
+
+beforeEnter(el) {
+	console.log('beforeEnter');
+},
+enter(el, done) {
+	console.log('enter');
+	done();
+},
+beforeLeave(el) {
+	console.log('beforeLeave');
+},
+leave(el, done) {
+	console.log('leave');
+	done();
+},
+
+
+${1:mutationName}() {
+	this.\$store.commit('${1:mutationName}', ${2:payload});
+}
+
+
+${1:actionName}() {
+	this.\$store.dispatch('${1:actionName}', ${2:payload});
+}
+
+
+import Vue from 'vue';
+import ${1:HelloWorld} from './components/${1:HelloWorld}';
+
+describe('${1:HelloWorld}.vue', () => {
+	it('${2:should render correct contents}', () => {
+		const Constructor = Vue.extend(${1:HelloWorld});
+		const vm = new Constructor().$mount();
+		expect(vm.$el.querySelector('.hello h1').textContent)
+			.to.equal(${3:'Welcome to Your Vue.js App'});
+	});
+});
+
+
+module.exports = {
+	css: {
+		loaderOptions: {
+			${1:sass}: {
+				data: `${2:@import '@/styles/_variables.scss';}`
+			}
+		}
+	}
+}
+
+
+const ${1:name} = reactive({
+	${2:count}: ${3:0}
+})
+
+
+const ${1:name} = computed(() => {
+	return ${2}
+})
+
+
+watch(() => ${1:foo}, (newValue, oldValue) => {
+	${2}
+})
+
+
+watch([${1:foo}, ${2:bar}], ([new${1}, new${2}], [prev${1}, prev${2}]) => {
+	${3}
+})
+
+
+watchEffect(() => {
+	${1}
+})
+
+
+const ${1:name} = ref(${2:initialValue})
+
+
+onMounted(() => {${1}})
+
+
+onBeforeMount(() => {${1}})
+
+
+onBeforeUpdate(() => {${1}})
+
+
+onUpdated(() => {${1}})
+
+
+onErrorCaptured(() => {${1}})
+
+
+onUnmounted(() => {${1}})
+
+
+onBeforeUnmount(() => {${1}})
+
+
+import Vue from 'vue'
+import ${1:VueCompositionApi} from '${2:@vue/composition-api}'
+
+Vue.use(${1:VueCompositionApi})
+
+
+import { reactive, toRefs } from 'vue'
+
+export default {
+	setup () {
+		const state = reactive({
+			${0:count}: ${1:0},
+		})
+	
+		return {
+			...toRefs(state),
+		}
+	}
+}
+
+
+import { ${0:component} } from '@/composables/${0:component}.js'
+
+export default {
+	setup () {
+		const { ${1:name} } = ${0:component}()
+	
+		return {
+			${1:name}
+		}
+	}
+}
+
+
+<${1:div} v-for="${2:item} in ${2:item}s" :key="${2:item}.id">
+	{{ ${2:item} }}
+</${1:div}>
+
+
+<input v-model="${1:data}" type="text" />
+
+
+<input v-model.number="${1:numData}" type="number" step="1" />
+
+
+@click="${1:handler}(${2:arg}, $event)"
+
+
+<${1:component} :${1:propName}="${0}"></${1:component}>
+
+
+<template v-slot:${0:name}>${1:defaultcontent}</template>
+
+
+<img :src="'/path/to/images/' + ${1:fileName}" alt="${2:altText}"/>
+
+
+<${1:div} :style="{ fontSize: ${2:data} + 'px' }"></${1:div}>
+
+
+<${1:div} :style="[${2:styleObjectA}, ${3:styleObjectB]}"></${1:div}>
+
+
+<${1:div} :class="{ ${2:className}: ${3:data} }"></${1:div}>
+
+
+<${1:div} :class="[${2:classNameA}, ${3:classNameB}]"></${1:div}>
+
+
+<${1:div} :class="[${2:classNameA}, {${3:classNameB} : ${4:condition}}]"></${1:div}>
+
+
+@change="$$emit('change', $$event.target.value)"
+
+
+@change="${1:foo} = $$event"
+
+
+<transition
+	mode="out-in"
+	@before-enter="beforeEnter"
+	@enter="enter"
+
+	@before-leave="beforeLeave"
+	@leave="leave"
+	:css="false">
+
+</transition>
+
+
+<nuxt-link to="/${1:page}">${1:page}</nuxt-link>
+
+
+<router-link :to="{name: '${1:name}'}">${2:LinkTitle}</router-link>
+
+
+<router-link :to="{name: '${1:name}', params:{${2:id}: '${3:value}'} }">${4:LinkTitle}</router-link>
+
+
+<router-link to="${1:path}">${2:LinkTitle}</router-link>

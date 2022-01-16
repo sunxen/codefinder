@@ -1,0 +1,174 @@
+import ${2:moduleName} from '${1:module}';$0
+
+
+import '${1:module}';$0
+
+
+import { $2 } from '${1:module}';$0
+
+
+import * as ${2:alias} from '${1:module}';$0
+
+
+import { ${2:originalName} as ${3:alias} } from '${1:module}';$0
+
+
+require('${1:package}');
+
+
+const ${1:packageName} = require('${1:package}');$0
+
+
+module.exports = {
+	$0
+};
+
+
+
+export const ${1:exportVariable} = ${2:localVariable};
+
+
+
+export const ${1:functionName} = (${2:params}) => {
+	$0
+};
+
+
+
+export default function ${1:${TM_FILENAME_BASE}}(${2:params}) {
+	$0
+};
+
+
+
+export default class ${1:className} {
+	$0
+};
+
+
+
+export default class ${1:className} extends ${2:baseclassName} {
+	$0
+};
+
+
+
+constructor(${1:params}) {
+	${0}
+}
+
+
+${1:methodName}(${2:params}) {
+	${0}
+}
+
+
+get ${1:propertyName}() {
+	return this.${0};
+}
+
+
+set ${1:propertyName}(${2:value}) {
+	${0};
+}
+
+
+${1:array}.forEach(${2:currentItem} => {
+	${0}
+});
+
+
+for (const ${1:item} of ${2:object}) {
+	${0}
+}
+
+
+for (const ${1:item} in ${2:object}) {
+	${0}
+}
+
+
+(${1:params}) => {
+	${2}
+}
+
+
+const ${1:name} = (${2:params}) => {
+	${3}
+}
+
+
+const {${2:propertyName}} = ${1:objectToDestruct};
+
+
+const [${2:propertyName}] = ${1:arrayToDestruct};
+
+
+setInterval(() => {
+	${2}
+}, ${0:intervalInms});
+
+
+setTimeout(() => {
+	${2}
+}, ${1:delayInms});
+
+
+return new Promise((resolve, reject) => {
+	${1}
+});
+
+
+.then((${1:result}) => {
+	${2}
+}).catch((${3:err}) => {
+	${4}
+});
+
+
+console.assert(${1:expression}, ${2:object});
+
+
+console.clear();
+
+
+console.count(${1:label});
+
+
+console.debug(${1:object});
+
+
+console.dir(${1:object});
+
+
+console.error(${1:object});
+
+
+console.group('${1:label}');
+
+
+console.groupEnd();
+
+
+console.log(${1:object});
+
+
+console.log('${1:object} :>> ', ${1:object});
+
+
+console.trace(${1:object});
+
+
+console.warn(${1:object});
+
+
+console.info(${1:object});
+
+
+console.table(${1:object});
+
+
+console.time(${1:object});
+
+
+console.timeEnd(${1:object});

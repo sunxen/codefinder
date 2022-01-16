@@ -1,0 +1,6 @@
+coverage
+out
+assets
+node_modules
+.vscode
+.github

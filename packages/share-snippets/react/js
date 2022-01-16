@@ -1,0 +1,1802 @@
+import ${2:moduleName} from '${1:module}'$0
+
+
+import '${1:module}'$0
+
+
+import { $2 } from '${1:module}'$0
+
+
+import * as ${2:alias} from '${1:module}'$0
+
+
+import { ${2:originalName} as ${3:alias} } from '${1:module}'$0
+
+
+export default $1$0
+
+
+export { $2 } from '${1:module}'$0
+
+
+export { ${2:originalName} as ${3:alias} } from '${1:module}'$0
+
+
+export const ${1:functionName} = (${2:params}) => {
+	$0
+}
+
+
+
+export default (${1:params}) => {
+	$0
+}
+
+
+
+export default function ${1:functionName}(${2:params}) {
+	$0
+}
+
+
+
+${1:methodName} = (${2:params}) => {
+	${0}
+}
+
+
+
+get ${1:propertyName}() {
+	return this.${0}
+}
+
+
+
+set ${1:propertyName}(${2:value}) {
+	${0}
+}
+
+
+
+${1:array}.forEach(${2:currentItem} => {
+	${0}
+})
+
+
+
+for(let ${1:item} of ${2:object}) {
+	${0}
+}
+
+
+
+for(let ${1:item} in ${2:object}) {
+	${0}
+}
+
+
+
+(${1:params}) => {
+	${2}
+}
+
+
+const ${1:name} = (${2:params}) => {
+	${3}
+}
+
+
+
+const {${2:propertyName}} = ${1:objectToDestruct}
+
+
+const [${2:propertyName}] = ${1:arrayToDestruct}
+
+
+setInterval(() => {
+	${2}
+}, ${0:intervalInms})
+
+
+
+setTimeout(() => {
+	${2}
+}, ${1:delayInms})
+
+
+
+return new Promise((resolve, reject) => {
+	${1}
+})
+
+
+
+console.assert(${1:expression}, ${2:object})
+
+
+console.clear()
+
+
+console.count(${1:label})
+
+
+console.dir(${1:object})
+
+
+console.error(${1:object})
+
+
+console.group("${1:label}")
+
+
+console.groupEnd()
+
+
+console.log(${1:object})
+
+
+console.trace(${1:object})
+
+
+console.log(`${1:object}`, ${1:object})
+
+
+console.log(`${1:object}`, JSON.stringify(${1:object}, null, 2))
+
+
+console.time(`${1:object}`)
+
+
+console.timeEnd(`${1:object}`)
+
+
+console.warn(${1:object})
+
+
+console.info(${1:object})
+
+
+const { $1 } = this.props
+
+
+const { $1 } = this.state
+
+
+import React from 'react'
+
+
+
+import ReactDOM from 'react-dom'
+
+
+
+import React, { Component } from 'react'
+
+
+
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
+
+
+import React, { PureComponent } from 'react'
+
+
+
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+
+
+
+import React, { memo } from 'react'
+
+
+
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+
+
+
+import React, { useState } from 'react'
+
+
+
+import React, { useEffect } from 'react'
+
+
+
+import React, { useRef } from 'react'
+
+
+
+import React, { useState, useEffect } from 'react'
+
+
+
+import PropTypes from 'prop-types'
+
+
+
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+
+
+
+import { BrowserRouter as Router } from 'react-router-dom'
+
+
+
+import { Route } from 'react-router-dom'
+
+
+
+import { Route, Switch, NavLink, Link } from 'react-router-dom'
+
+
+
+import { Switch } from 'react-router-dom'
+
+
+
+import { Link } from 'react-router-dom'
+
+
+
+import { NavLink } from 'react-router-dom'
+
+
+
+import { connect } from 'react-redux'
+
+
+
+import React, { Component } from 'react'
+
+export default class ${1:${TM_FILENAME_BASE}} extends Component {
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+
+
+import React, { Component } from 'react'
+
+export class ${1:${TM_FILENAME_BASE}} extends Component {
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React from 'react'
+
+function ${1:${TM_FILENAME_BASE}}() {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React from 'react'
+
+export default function ${1:${TM_FILENAME_BASE}}() {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+
+
+import React from 'react'
+import PropTypes from 'prop-types'
+
+function ${1:${TM_FILENAME_BASE}}(props) {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+
+import React from 'react'
+
+const ${1:${TM_FILENAME_BASE}} = () => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React from 'react'
+
+export const ${1:${TM_FILENAME_BASE}} = () => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+
+
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const ${1:${TM_FILENAME_BASE}} = props => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
+export class ${1:${TM_FILENAME_BASE}} extends Component {
+	static propTypes = {
+
+	}
+
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React, { PureComponent } from 'react'
+
+export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+
+
+import React, { PureComponent } from 'react'
+
+export class ${1:${TM_FILENAME_BASE}} extends PureComponent {
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+export default ${1:$TM_FILENAME_BASE}
+
+
+
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+
+export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {
+	static propTypes = {
+
+	}
+
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+
+
+import React, { memo } from 'react'
+
+export default memo(function ${1:${TM_FILENAME_BASE}}() {
+	return (
+		<div>
+			$0
+		</div>
+	)
+})
+
+
+
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+
+const ${1:${TM_FILENAME_BASE}} = memo(function ${1:${TM_FILENAME_BASE}}(props) {
+	return (
+		<div>
+			$0
+		</div>
+	)
+})
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
+export default class ${1:${TM_FILENAME_BASE}} extends Component {
+	static propTypes = {
+		${2:prop}: ${3:PropTypes}
+	}
+
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+
+
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+export class ${1:${TM_FILENAME_BASE}} extends Component {
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+const mapStateToProps = (state) => ({
+	
+})
+
+const mapDispatchToProps = {
+	
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})
+
+
+
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
+export class ${1:${TM_FILENAME_BASE}} extends Component {
+	static propTypes = {
+		${2:prop}: ${3:PropTypes}
+	}
+
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+const mapStateToProps = (state) => ({
+	
+})
+
+const mapDispatchToProps = {
+	
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})
+
+
+
+import React from 'react'
+import { connect } from 'react-redux'
+
+export const ${1:${TM_FILENAME_BASE}} = (props) => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+const mapStateToProps = (state) => ({
+	
+})
+
+const mapDispatchToProps = {
+	
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})
+
+
+
+import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
+export const ${1:${TM_FILENAME_BASE}} = (props) => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+	${2:props}: ${3:PropTypes}
+}
+
+const mapStateToProps = (state) => ({
+	
+})
+
+const mapDispatchToProps = {
+	
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})
+
+
+
+const mapStateToProps = (state) => ({
+	${1}
+})
+
+const mapDispatchToProps = {
+	
+}
+
+
+
+constructor(props) {
+	super(props)
+
+	this.state = {
+		 $0
+	}
+}
+
+
+
+state = {
+	$1
+}
+
+
+
+componentWillMount() {
+	$0
+}
+
+
+
+componentDidMount() {
+	$0
+}
+
+
+
+componentWillReceiveProps(nextProps) {
+	$0
+}
+
+
+
+shouldComponentUpdate(nextProps, nextState) {
+	$0
+}
+
+
+
+componentWillUpdate(nextProps, nextState) {
+	$0
+}
+
+
+
+componentDidUpdate(prevProps, prevState) {
+	$0
+}
+
+
+
+componentWillUnmount() {
+	$0
+}
+
+
+
+static getDerivedStateFromProps(props, state) {
+	${1}
+}
+
+
+getSnapshotBeforeUpdate = (prevProps, prevState) => {
+	$0
+}
+
+
+
+render() {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+
+const ${1:contextName} = React.createContext()
+
+
+
+this.${1:refName}Ref = React.createRef()
+
+
+
+const ref = React.createRef()
+
+
+
+this.setState({$0})
+
+
+this.setState((state, props) => { return { $0 }})
+
+
+
+this.props.$0
+
+
+this.state.$0
+
+
+this.${1:methodName} = this.${1:methodName}.bind(this)$0
+
+
+export const ${1:actionName} = (payload) => ({
+	type: ${3:type},
+	payload
+})
+
+
+
+export const ${1:constantName} = '${1:constantName}'
+
+
+const initialState = {
+
+}
+
+export default (state = initialState, { type, payload }) => {
+	switch (type) {
+
+	case ${1:typeName}:
+		return { ...state, ...payload }
+
+	default:
+		return state
+	}
+}
+
+
+
+import { createSelector } from 'reselect'
+
+export const ${1:selectorName} = state => state.${2:selector}
+
+
+
+import { createSlice } from '@reduxjs/toolkit'
+
+const initialState = {
+
+}
+
+const ${1:${TM_FILENAME_BASE}} = createSlice({
+	name: ${2:sliceName},
+	initialState,
+	reducers: {
+	
+	}
+});
+
+export const {
+
+} = ${1:${TM_FILENAME_BASE}}.actions
+export default ${1:${TM_FILENAME_BASE}}.reducer
+
+
+import React, { Component } from 'react'
+import { Text, View } from 'react-native'
+
+export default class ${1:${TM_FILENAME_BASE}} extends Component {
+	render() {
+		return (
+			<View>
+				<Text> ${2:textInComponent} </Text>
+			</View>
+		)
+	}
+}
+
+
+
+import React, { Component } from 'react'
+import { Text, StyleSheet, View } from 'react-native'
+
+export default class ${1:${TM_FILENAME_BASE}} extends Component {
+	render() {
+		return (
+			<View>
+				<Text> ${2:textInComponent} </Text>
+			</View>
+		)
+	}
+}
+
+const styles = StyleSheet.create({})
+
+
+
+import React, { Component } from 'react'
+import { Text, View } from 'react-native'
+
+export class ${1:${TM_FILENAME_BASE}} extends Component {
+	render() {
+		return (
+			<View>
+				<Text> ${2:textInComponent} </Text>
+			</View>
+		)
+	}
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React, { PureComponent } from 'react'
+import { Text, View } from 'react-native'
+
+export default class ${1:${TM_FILENAME_BASE}} extends PureComponent {
+	render() {
+		return (
+			<View>
+				<Text> ${2:textInComponent} </Text>
+			</View>
+		)
+	}
+}
+
+
+
+import React, { PureComponent } from 'react'
+import { Text, View } from 'react-native'
+
+export class ${1:${TM_FILENAME_BASE}} extends PureComponent {
+	render() {
+		return (
+			<View>
+				<Text> ${2:textInComponent} </Text>
+			</View>
+		)
+	}
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React, { Component } from 'react'
+import { View, Text } from 'react-native'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
+export class ${1:${TM_FILENAME_BASE}} extends Component {
+	static propTypes = {
+		${2:prop}: ${3:PropTypes}
+	}
+
+	render() {
+		return (
+			<View>
+				<Text> ${2:textInComponent} </Text>
+			</View>
+		)
+	}
+}
+
+const mapStateToProps = (state) => ({
+	
+})
+
+const mapDispatchToProps = {
+	
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})
+
+
+
+import React from 'react'
+import { View, Text } from 'react-native'
+
+const ${1:${TM_FILENAME_BASE}} = () => {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+
+const ${1:${TM_FILENAME_BASE}} = () => {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+const styles = StyleSheet.create({})
+
+
+
+import React from 'react'
+import { View, Text } from 'react-native'
+
+export default function ${1:${TM_FILENAME_BASE}}() {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+
+
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+
+export default function ${1:${TM_FILENAME_BASE}}() {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+const styles = StyleSheet.create({})
+
+
+
+import { ${1:moduleName} } from 'react-native'
+
+
+const styles = StyleSheet.create({
+	${1:style}
+})
+
+
+
+PropTypes.array,
+
+
+PropTypes.array.isRequired,
+
+
+PropTypes.bool,
+
+
+PropTypes.bool.isRequired,
+
+
+PropTypes.func,
+
+
+PropTypes.func.isRequired,
+
+
+PropTypes.number,
+
+
+PropTypes.number.isRequired,
+
+
+PropTypes.object,
+
+
+PropTypes.object.isRequired,
+
+
+PropTypes.string,
+
+
+PropTypes.string.isRequired,
+
+
+PropTypes.node,
+
+
+PropTypes.node.isRequired,
+
+
+PropTypes.element,
+
+
+PropTypes.element.isRequired,
+
+
+PropTypes.instanceOf($0),
+
+
+PropTypes.instanceOf($0).isRequired,
+
+
+PropTypes.oneOf(['$0']),
+
+
+PropTypes.oneOf(['$0']).isRequired,
+
+
+PropTypes.oneOfType([
+	$0
+]),
+
+
+PropTypes.oneOfType([
+	$0
+]).isRequired,
+
+
+PropTypes.arrayOf($0),
+
+
+PropTypes.arrayOf($0).isRequired,
+
+
+PropTypes.objectOf($0),
+
+
+PropTypes.objectOf($0).isRequired,
+
+
+PropTypes.shape({
+	$0
+}),
+
+
+PropTypes.shape({
+	$0
+}).isRequired,
+
+
+PropTypes.exact({
+	$0
+}),
+
+
+PropTypes.exact({
+	$0
+}).isRequired,
+
+
+static propTypes = {
+$0
+}
+
+
+
+PropTypes.any,
+
+
+/**
+ * ${0}
+ */
+
+
+describe('$1', () => {
+	$0
+})
+
+
+
+test('should $1', () => {
+	$0
+})
+
+
+
+test('should $1', async () => {
+	$0
+})
+
+
+
+it('should $1', () => {
+	$0
+})
+
+
+
+it('should $1', async () => {
+	$0
+})
+
+
+
+import React from 'react'
+import renderer from 'react-test-renderer'
+
+import { ${1:${TM_FILENAME_BASE}} } from '../${1:${TM_FILENAME_BASE}}'
+
+describe('<${1:${TM_FILENAME_BASE}} />', () => {
+	const defaultProps = {}
+	const wrapper = renderer.create(<${1:${TM_FILENAME_BASE}} {...defaultProps} />)
+
+	test('render', () => {
+		expect(wrapper).toMatchSnapshot()
+	})
+})
+
+
+
+import 'react-native'
+import React from 'react'
+import renderer from 'react-test-renderer'
+
+import ${1:${TM_FILENAME_BASE}} from '../${1:${TM_FILENAME_BASE}}'
+
+describe('<${1:${TM_FILENAME_BASE}} />', () => {
+	const defaultProps = {}
+	const wrapper = renderer.create(<${1:${TM_FILENAME_BASE}} {...defaultProps} />)
+
+	test('render', () => {
+		expect(wrapper).toMatchSnapshot()
+	})
+})
+
+
+
+import React from 'react'
+import renderer from 'react-test-renderer'
+import { Provider } from 'react-redux'
+
+import store from 'src/store'
+import { ${1:${TM_FILENAME_BASE}} } from '../${1:${TM_FILENAME_BASE}}'
+
+describe('<${1:${TM_FILENAME_BASE}} />', () => {
+	const defaultProps = {}
+	const wrapper = renderer.create(
+		<Provider store={store}>
+		 <${1:${TM_FILENAME_BASE}} {...defaultProps} />
+		</Provider>,
+	)
+
+	test('render', () => {
+		expect(wrapper).toMatchSnapshot()
+	})
+})
+
+
+
+import 'react-native'
+import React from 'react'
+import renderer from 'react-test-renderer'
+import { Provider } from 'react-redux'
+
+import store from 'src/store'
+import ${1:${TM_FILENAME_BASE}} from '../${1:${TM_FILENAME_BASE}}'
+
+describe('<${1:${TM_FILENAME_BASE}} />', () => {
+	const defaultProps = {}
+	const wrapper = renderer.create(
+		<Provider store={store}>
+			<${1:${TM_FILENAME_BASE}} {...defaultProps} />
+		</Provider>,
+	)
+
+	test('render', () => {
+		expect(wrapper).toMatchSnapshot()
+	})
+})
+
+
+
+import { compose, graphql } from 'react-apollo'
+
+
+
+export default compose(
+	graphql(${1:queryOrMutation}, { name: ${2:name} }),
+)(${1:${TM_FILENAME_BASE}})
+
+
+import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
+export const mapStateToProps = state => ({
+
+})
+
+export const mapDispatchToProps = {
+ 
+}
+
+export const ${1:hocComponentName} = (WrappedComponent) => {
+	const hocComponent = ({ ...props }) => <WrappedComponent {...props} />
+
+	hocComponent.propTypes = {
+	}
+
+	return hocComponent
+}
+
+export default WrapperComponent => connect(mapStateToProps, mapDispatchToProps)(${1:hocComponentName}(WrapperComponent))
+
+
+
+import React from 'react'
+import PropTypes from 'prop-types'
+
+export default (WrappedComponent) => {
+	const hocComponent = ({ ...props }) => <WrappedComponent {...props} />
+
+	hocComponent.propTypes = {
+	}
+
+	return hocComponent
+}
+
+
+
+const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState})
+
+
+useEffect(() => {
+	${1:effect}
+	return () => {
+		${2:cleanup}
+	}
+}, [${3:input}])
+
+
+const ${1:context} = useContext(${2:contextValue})
+
+
+const [state, dispatch] = useReducer(${1:reducer}, ${2:initialState}, ${3:init})
+
+
+useCallback(
+	() => {
+		${1:callback}
+	},
+	[${2:input}],
+)
+
+
+useMemo(() => ${1:function}, ${2:input})
+
+
+const ${1:ref} = useRef(${2:initialValue})
+
+
+useImperativeHandle(
+	${1:ref},
+	() => {
+		${2:handler}
+	},
+	[${3:input}],
+)
+
+
+useDebugValue(${1:value})
+
+
+useLayoutEffect(() => {
+	${1:effect}
+	return () => {
+		${2:cleanup}
+	};
+}, [${3:input}])
+
+
+const ${1:state} = useSelector(state => state.${1:state})
+
+
+const dispatch = useDispatch()
+
+
+typeof ${0}
+
+
+function ${1:${TM_FILENAME_BASE}}() {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+export default function ${1:${TM_FILENAME_BASE}}() {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+
+
+import PropTypes from 'prop-types'
+
+function ${1:${TM_FILENAME_BASE}}(props) {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+
+const ${1:${TM_FILENAME_BASE}} = () => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+export const ${1:${TM_FILENAME_BASE}} = () => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+
+
+import PropTypes from 'prop-types'
+
+const ${1:${TM_FILENAME_BASE}} = props => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+${1:${TM_FILENAME_BASE}}.propTypes = {
+
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import { View, Text } from 'react-native'
+
+const ${1:${TM_FILENAME_BASE}} = () => {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import { StyleSheet, Text, View } from 'react-native'
+
+const ${1:${TM_FILENAME_BASE}} = () => {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+const styles = StyleSheet.create({})
+
+
+
+import { View, Text } from 'react-native'
+
+export default function ${1:${TM_FILENAME_BASE}}() {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+
+
+import { StyleSheet, Text, View } from 'react-native'
+
+export default function ${1:${TM_FILENAME_BASE}}() {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+const styles = StyleSheet.create({})
+
+
+
+import renderer from 'react-test-renderer'
+
+import { ${1:${TM_FILENAME_BASE}} } from '../${1:${TM_FILENAME_BASE}}'
+
+describe('<${1:${TM_FILENAME_BASE}} />', () => {
+	const defaultProps = {}
+	const wrapper = renderer.create(<${1:${TM_FILENAME_BASE}} {...defaultProps} />)
+
+	test('render', () => {
+		expect(wrapper).toMatchSnapshot()
+	})
+})
+
+
+
+import 'react-native'
+import renderer from 'react-test-renderer'
+
+import ${1:${TM_FILENAME_BASE}} from '../${1:${TM_FILENAME_BASE}}'
+
+describe('<${1:${TM_FILENAME_BASE}} />', () => {
+	const defaultProps = {}
+	const wrapper = renderer.create(<${1:${TM_FILENAME_BASE}} {...defaultProps} />)
+
+	test('render', () => {
+		expect(wrapper).toMatchSnapshot()
+	})
+})
+
+
+
+import renderer from 'react-test-renderer'
+import { Provider } from 'react-redux'
+
+import store from 'src/store'
+import { ${1:${TM_FILENAME_BASE}} } from '../${1:${TM_FILENAME_BASE}}'
+
+describe('<${1:${TM_FILENAME_BASE}} />', () => {
+	const defaultProps = {}
+	const wrapper = renderer.create(
+		<Provider store={store}>
+		 <${1:${TM_FILENAME_BASE}} {...defaultProps} />
+		</Provider>,
+	)
+
+	test('render', () => {
+		expect(wrapper).toMatchSnapshot()
+	})
+})
+
+
+
+import 'react-native'
+import renderer from 'react-test-renderer'
+import { Provider } from 'react-redux'
+
+import store from 'src/store'
+import ${1:${TM_FILENAME_BASE}} from '../${1:${TM_FILENAME_BASE}}'
+
+describe('<${1:${TM_FILENAME_BASE}} />', () => {
+	const defaultProps = {}
+	const wrapper = renderer.create(
+		<Provider store={store}>
+			<${1:${TM_FILENAME_BASE}} {...defaultProps} />
+		</Provider>,
+	)
+
+	test('render', () => {
+		expect(wrapper).toMatchSnapshot()
+	})
+})
+
+
+
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
+export const mapStateToProps = state => ({
+
+})
+
+export const mapDispatchToProps = {
+ 
+}
+
+export const ${1:hocComponentName} = (WrappedComponent) => {
+	const hocComponent = ({ ...props }) => <WrappedComponent {...props} />
+
+	hocComponent.propTypes = {
+	}
+
+	return hocComponent
+}
+
+export default WrapperComponent => connect(mapStateToProps, mapDispatchToProps)(${1:hocComponentName}(WrapperComponent))
+
+
+
+import PropTypes from 'prop-types'
+
+export default (WrappedComponent) => {
+	const hocComponent = ({ ...props }) => <WrappedComponent {...props} />
+
+	hocComponent.propTypes = {
+	}
+
+	return hocComponent
+}
+
+
+
+const ${1:${TM_FILENAME_BASE}} = () => {
+	$2
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+import React, { Component } from 'react'
+
+interface Props {
+	
+}
+interface State {
+	
+}
+
+export default class ${1:${TM_FILENAME_BASE}} extends Component<Props, State> {
+	state = {}
+
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+
+
+import React, { Component } from 'react'
+
+interface Props {
+	
+}
+interface State {
+	
+}
+
+class ${1:${TM_FILENAME_BASE}} extends Component<Props, State> {
+	state = {}
+
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React, { ReactElement } from 'react'
+
+interface Props {
+	
+}
+
+function ${1:${TM_FILENAME_BASE}}({}: Props): ReactElement {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React, { ReactElement } from 'react'
+
+interface Props {
+	
+}
+
+export default function ${1:${TM_FILENAME_BASE}}({}: Props): ReactElement {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+
+
+import React from 'react'
+
+interface Props {
+	
+}
+
+const ${1:${TM_FILENAME_BASE}} = (props: Props) => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React from 'react'
+
+interface Props {
+	
+}
+
+export const ${1:${TM_FILENAME_BASE}} = (props: Props) => {
+	return (
+		<div>
+			$0
+		</div>
+	)
+}
+
+
+
+import React, { PureComponent } from 'react'
+
+interface Props {
+	
+}
+
+export default class ${1:${TM_FILENAME_BASE}} extends PureComponent<Props> {
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+
+
+import React, { PureComponent } from 'react'
+
+interface Props {
+	
+}
+
+class ${1:${TM_FILENAME_BASE}} extends PureComponent<Props> {
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React, { memo } from 'react'
+
+interface Props {
+	
+}
+
+export default memo(function ${1:${TM_FILENAME_BASE}}({}: Props) {
+	return (
+		<div>
+			$0
+		</div>
+	)
+})
+
+
+
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+interface Props {
+	
+}
+interface State {
+	
+}
+
+export class ${1:${TM_FILENAME_BASE}} extends Component<Props, State> {
+	state = {}
+
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+		)
+	}
+}
+
+const mapStateToProps = (state) => ({
+	
+})
+
+const mapDispatchToProps = {
+	
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})
+
+
+
+import React from 'react'
+import { View, Text } from 'react-native'
+
+interface Props {
+	
+}
+
+const ${1:${TM_FILENAME_BASE}} = (props: Props) => {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React from 'react'
+import { View } from 'react-native'
+
+interface ${1:${TM_FILENAME_BASE}}Props {
+	
+}
+
+const ${1:${TM_FILENAME_BASE}}: React.FC<${1:${TM_FILENAME_BASE}}Props> = (props) => {
+	return (
+		<View>
+			$0
+		</View>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+
+
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+
+interface Props {
+	
+}
+
+const ${1:${TM_FILENAME_BASE}} = (props: Props) => {
+	return (
+		<View>
+			<Text>$0</Text>
+		</View>
+	)
+}
+
+export default ${1:${TM_FILENAME_BASE}}
+
+const styles = StyleSheet.create({})
+
+
+
+export interface ${1:${TM_FILENAME_BASE}} {$0}
+
+
+export type ${1:${TM_FILENAME_BASE}} = {$0}

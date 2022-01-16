@@ -1,4 +1,4 @@
-[English](./packages/codefinder-vscode/README.en.md)
+[English](./README.en.md)
 
 # Code Finder
 CodeFinder 是代码的智能输入法，输入少量字符来快速完成一行或者多行代码。自动提取当前项目的所有代码片段，也可以添加自定义代码片段。支持所有编程语言，比如 Javascript, HTML, CSS, Python, Go, PHP, Vue, React ...
@@ -27,4 +27,3 @@ CodeFinder 是代码的智能输入法，输入少量字符来快速完成一行
 新增代码片段
 * 文件名对应编程语言后缀名
 * 多个代码片段用双空行分隔
-
