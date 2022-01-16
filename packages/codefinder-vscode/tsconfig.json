@@ -3,7 +3,7 @@
       "module": "commonjs",
       "target": "es2018",
       "outDir": "out",
-      "lib": ["es2018"],
+      "lib": ["es2018", "dom"],
       "sourceMap": true,
       "strict": true,
       "alwaysStrict": true,
@@ -20,4 +20,3 @@
     },
     "exclude": ["node_modules"]
   }
-  

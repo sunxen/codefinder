@@ -33,11 +33,11 @@ function loadTrieNoCache(targetFile: string): TrieNode {
     segments.push(...loadUserSegments(targetFile))
     segments.push(...loadProjectSegments(targetFile))
     segments = merge(segments)
-    logger.debug(`load segments use time: ${Date.now() - start}`)
+    logger.debug(`load segments use time: ${Date.now() - start}, size: ${segments.length}`)
 
     const start2 = Date.now()
     segments.push(...findCommonPart(segments))
-    logger.debug(`findCommonPart use time: ${Date.now() - start2}`)
+    logger.debug(`findCommonPart use time: ${Date.now() - start2}, size: ${segments.length}`)
 
     const trie = new TrieNode()
     for (const segment of segments) {

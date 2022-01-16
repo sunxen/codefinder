@@ -36,7 +36,7 @@ export function activate(context: vscode.ExtensionContext): void {
         void context.globalState.update('uid', uid)
     }
     timer = setInterval(doReport, REPORT_INTERVAL)
-    console.log('[CondeFinder] active, ', uid)
+    console.log('[CodeFinder] active, ', uid)
 }
 
 export function deactivate(): void {

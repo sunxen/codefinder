@@ -33,6 +33,11 @@
         "prettier:check": "prettier --check src/",
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
+    "dependencies": {
+        "@types/vscode": "^1.50.0",
+        "axios": "^0.24.0",
+        "lin": "link:../lin"
+    },
     "devDependencies": {
         "@types/mocha": "^2.2.42",
         "@types/node": "^10.17.15",
@@ -41,15 +46,6 @@
         "eslint": "^7.32.0",
         "eslint-config-airbnb-typescript": "^12.3.1",
         "eslint-config-prettier": "^8.2.0",
-        "eslint-import-resolver-typescript": "^2.4.0",
-        "eslint-plugin-import": "^2.22.1",
-        "tslint": "^5.12.1",
-        "typescript": "^3.7.5"
-    },
-    "dependencies": {
-        "@types/vscode": "^1.50.0",
-        "axios": "^0.21.4",
-        "lin": "link:../lin",
-        "prettier": "^1.15.2"
+        "typescript": "^3.9.10"
     }
 }
