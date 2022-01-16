@@ -1,5 +1,5 @@
 {
-    "name": "codefinder-vscode",
+    "name": "codefinder",
     "displayName": "Code Finder",
     "description": "Smart input method for code and snippets, input few letters to complete one line or more code. Automatically extract all snippets from the current project, and you can also add custom snippets. Supports all programming languages: Javascript, HTML, CSS, Python, Go, PHP, Vue, React ...",
     "version": "1.0.0",
