@@ -98,5 +98,10 @@ export function getFileExt(file: string): string {
 }
 
 export function getProjectExtKey(targetFile: string): string {
+    // user segments
+    if (targetFile?.includes('.codefinder')) {
+        const lang = path.basename(targetFile).split('.')[0]
+        return `${getProjectDir(targetFile)}:${lang}`
+    }
     return `${getProjectDir(targetFile)}:${getFileExt(targetFile)}`
 }

@@ -20,7 +20,7 @@ export function isSegmentsExpired(file: string): boolean {
     }
 
     const stat = fs.lstatSync(file)
-    if (stat.mtimeMs > segmentCache[file]?.timestamp) {
+    if (stat.mtimeMs !== segmentCache[file]?.timestamp) {
         return true
     }
 
@@ -28,8 +28,9 @@ export function isSegmentsExpired(file: string): boolean {
 }
 
 export function saveSegments(file: string, segments: Segment[]): void {
+    const stat = fs.lstatSync(file)
     segmentCache[file] = {
-        timestamp: Date.now(),
+        timestamp: stat.mtimeMs,
         data: segments
     }
 }

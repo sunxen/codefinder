@@ -12,7 +12,7 @@ let lastProcessTime = 0
 
 export default function analyze(targetFile: string): void{
     if (Date.now() - lastProcessTime < constants.ANALYZE_INTERVAL_MS) {
-        logger.debug('analyze is resting')
+        logger.debug('analyze throttle')
         return
     }
 

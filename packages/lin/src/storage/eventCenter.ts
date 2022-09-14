@@ -8,15 +8,10 @@ function getListeners(key: string) {
 }
 
 export function onProjectUpdate(key: string, listener: () => void): void {
-    const some = getListeners(key)
-    if (some.has(listener)) {
-        return
-    }
-    some.add(listener)
+    getListeners(key).add(listener)
 }
 
 export function notifyProjectUpdate(key: string): void {
     const some = getListeners(key)
     some.forEach(listener => listener())
-    listeners.delete(key)
 }
